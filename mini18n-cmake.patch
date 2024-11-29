@@ -1,0 +1,12 @@
+--- mini18n-0.2.1/src/CMakeLists.txt.orig	2011-11-22 22:59:25.000000000 +0100
++++ mini18n-0.2.1/src/CMakeLists.txt	2024-11-29 21:08:10.189978900 +0100
+@@ -25,7 +25,7 @@ set_target_properties(mini18n-shared PRO
+ add_library(mini18n-static STATIC ${mini18n_SOURCES})
+ set_target_properties(mini18n-static PROPERTIES OUTPUT_NAME mini18n)
+ 
+-install(TARGETS mini18n-shared DESTINATION "lib")
+-install(TARGETS mini18n-static DESTINATION "lib")
++install(TARGETS mini18n-shared DESTINATION "lib${LIB_SUFFIX}")
++install(TARGETS mini18n-static DESTINATION "lib${LIB_SUFFIX}")
+ install(FILES mini18n.h DESTINATION "include")
+ install(FILES mini18n-multi.h DESTINATION "include")
